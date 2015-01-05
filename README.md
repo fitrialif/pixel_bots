@@ -59,6 +59,7 @@ Algorithm:
   - Applications like search and rescue operations. Military reconnaissance by robot teams.
   -  Concept of exploration, creation of nodes, backtracking to start if goal found was implemented. 
   -  We also find the optimal path which identifies maximum number of markers in less than 8 minutes. Here the constraint of exploration for new nodes is the attribute associated with the shapes.  Ex if triangle shape, then node explored are only to the direction it point , or if a cross detected then all four nodes in cross are explored.
+  - cvLine function used to automatically generate a line path on the map , for graphical representation.
 
 * src/serverc.cpp: Running on the PC 
 Description
@@ -66,7 +67,13 @@ Description
   - Send values after comparing to the server
   - Orientation of robot in global frame was found using Orientation sensor values on an Android phone kept on robot.Senseduino app was used to relay the sensor values 
   - Bot orientation continuously mapped in local frame.
-  - 
+  - cur_angle = desired_angle-cur_angle+prev_angle <br>
+		rotation=cur_angle-prev_angle<br>
+    where  cur_angle= bots current heading in global frame , desired_angle = desired angle in global frame
+    , prev_angle= previous angle in global frame<br>
+    rotation= amount of rotation in local robot frame.
+  - Network sockets used to serially send characters to client as directional commands
+
 
 
 * src/pixel_bots.py : Running on the PC<br> 
