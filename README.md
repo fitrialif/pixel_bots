@@ -53,13 +53,20 @@ Algorithm:
   - Store the video capture as an image
   - Thresholding and shape detection to id. assigning row,column number from top left to bottom right. Getting (Y,X) of centre      of all shapes
   - generating a graph by adjusting all shapes into seperate rows and columns. Standard deviation value taken for adjustments
- 
+  -	Algorithm based on A star was used to plan the path.
+  - Instead of finding the costs using heuristics , to find the shortest path . 
+  - We find the optimal path which identifies maximum number of markers in less than 8 minutes. This I will further work on to develop a robust algorithm that can be used by robots to acquire targets in a map  
+  - Applications like search and rescue operations. Military reconnaissance by robot teams.
+  -  Concept of exploration, creation of nodes, backtracking to start if goal found was implemented. 
+  -  We also find the optimal path which identifies maximum number of markers in less than 8 minutes. Here the constraint of exploration for new nodes is the attribute associated with the shapes.  Ex if triangle shape, then node explored are only to the direction it point , or if a cross detected then all four nodes in cross are explored.
 
 * src/serverc.cpp: Running on the PC 
 Description
 
   - Send values after comparing to the server
-  - Heading of robot calculated using  
+  - Orientation of robot in global frame was found using Orientation sensor values on an Android phone kept on robot.Senseduino app was used to relay the sensor values 
+  - Bot orientation continuously mapped in local frame.
+  - 
 
 
 * src/pixel_bots.py : Running on the PC<br> 
