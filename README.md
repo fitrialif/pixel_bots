@@ -87,3 +87,9 @@ Description
 =====
 Youtube Video: 
 Coming Soon!
+
+=====
+Update (1)
+* Conditions for infinite loop added.
+* Select area of Google map saved offline. To test code for planning paths with maximum Gas station and Coffee shops
+* 
