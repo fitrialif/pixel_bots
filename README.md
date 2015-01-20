@@ -24,7 +24,7 @@ Shape Properties:
 More on the competition-http://www.techfest.org/pixelate and problem statement-http://www.techfest.org/resources/pixelate.pdf held from 2nd to 4th Jan 2015.
 
 Basic Research:<br>
-Learning basic motion planning algorithms like A* , D* , LPA* , D* Lite and deteriming the best one among them.<br>
+Learning basic motion planning algorithms like A* , D* , LPA* , D* Lite and determining the best one among them.<br>
 References: 
 
 * Planning Algorithms by S.Lavalle :http://planning.cs.uiuc.edu/book.pdf ,
@@ -39,7 +39,7 @@ Raspberry Pi, Wifi Adapter, Robot chassis with DC Motors, Power Bank, L298N moto
 ======
 Implementation: <br>
 - Used OpenCV to detect all shapes. All shapes then fitted into a grid type matrix for grid based path planning algorithms
-- Generated the best path which gets the highest score.Used a slight variant of A* motion planning algorithm. Here isntead of allocating costs in the heuristics we compare the properties of each cell whether its traversable or not.  
+- Generated the best path which gets the highest score.Used a slight variant of A* motion planning algorithm. Here instead of allocating costs in the heuristics we compare the properties of each cell whether its traversable or not.  
 - Heading and position of Bot tracked using a triangular marker
 - Communication with the onboard Raspberry Pi using Wifi by creating a local wifi hotspot. Sending characters for directional control using Network Socket.
 - Visual feedback to correct course or give new commands (PID Implementation pending)
@@ -52,7 +52,7 @@ Algorithm:
 
   - Store the video capture as an image
   - Thresholding and shape detection to id. assigning row,column number from top left to bottom right. Getting (Y,X) of centre      of all shapes
-  - generating a graph by adjusting all shapes into seperate rows and columns. Standard deviation value taken for adjustments
+  - generating a graph by adjusting all shapes into separate rows and columns. Standard deviation value taken for adjustments
   -	Algorithm based on A star was used to plan the path.
   - Instead of finding the costs using heuristics , to find the shortest path . 
   - We find the optimal path which identifies maximum number of markers in less than 8 minutes. This I will further work on to develop a robust algorithm that can be used by robots to acquire targets in a map  
