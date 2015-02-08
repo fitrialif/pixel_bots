@@ -2,7 +2,7 @@ pixel_bots
 ==========
 
 Ground Robot team for exploration and target acquisition.Fastest approach of three ground robots with to acquire weighted targets in a given maze to achieve the highest score in defined time interval.
-
+A better Documentation: http://goo.gl/sg68H3
 ==========
 Pilot Phase<br>
 To generate a path for a given map containing different shapes and autonomously navigate from start to end point using only Visual Feedback. The path to be generated is a tradeoff between total objects identified(including performing certain actions like glow LED's, Delay motion by 5s etc). The scoring is given by <br>
